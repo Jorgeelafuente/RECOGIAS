@@ -1,1 +1,455 @@
+/* ==========================================================
+   CONTROL RECOGIDAS
+   styles.css
+   Versión: 1.1.0
+========================================================== */
 
+/* ==========================================================
+   IMPORTACIÓN DE FUENTE
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================================
+   VARIABLES GLOBALES
+========================================================== */
+
+:root {
+
+    /* Colores principales */
+
+    --color-primary: #2D6CDF;
+    --color-primary-dark: #1E3A5F;
+    --color-primary-light: #5DA9FF;
+
+    /* Estados */
+
+    --color-success: #39B54A;
+    --color-warning: #F59E0B;
+    --color-danger: #E53935;
+
+    /* Fondo */
+
+    --color-background: #F4F6F9;
+    --color-card: #FFFFFF;
+
+    /* Texto */
+
+    --color-text: #2B2B2B;
+    --color-text-light: #6E7781;
+
+    /* Bordes */
+
+    --color-border: #E3E8EF;
+
+    /* Sombras */
+
+    --shadow-card: 0px 8px 20px rgba(0,0,0,.08);
+
+    /* Radios */
+
+    --radius: 14px;
+
+    /* Animaciones */
+
+    --transition: .25s ease;
+
+}
+
+/* ==========================================================
+   MODO OSCURO (Preparado)
+========================================================== */
+
+body.dark {
+
+    --color-background: #1B1F24;
+    --color-card: #252A31;
+
+    --color-text: #FFFFFF;
+    --color-text-light: #B5BDC7;
+
+    --color-border: #3A4048;
+
+}
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+body{
+
+    background:var(--color-background);
+
+    font-family:'Inter',sans-serif;
+
+    color:var(--color-text);
+
+    transition:var(--transition);
+
+}
+
+/* ==========================================================
+   CONTENEDOR
+========================================================== */
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:35px;
+
+}
+
+/* ==========================================================
+   CABECERA
+========================================================== */
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.truck{
+
+    font-size:48px;
+
+}
+
+.logo h1{
+
+    font-size:34px;
+
+    color:var(--color-primary-dark);
+
+    font-weight:700;
+
+}
+
+.logo p{
+
+    color:var(--color-text-light);
+
+    margin-top:4px;
+
+}
+
+.version{
+
+    font-size:14px;
+
+    color:var(--color-text-light);
+
+}
+
+/* ==========================================================
+   TARJETAS
+========================================================== */
+
+.card{
+
+    background:var(--color-card);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow-card);
+
+    padding:28px;
+
+    margin-bottom:22px;
+
+    transition:var(--transition);
+
+    border:1px solid transparent;
+
+}
+
+.card:hover{
+
+    transform:translateY(-2px);
+
+    border-color:var(--color-primary-light);
+
+}
+
+.card h2{
+
+    margin-bottom:18px;
+
+    color:var(--color-primary-dark);
+
+}
+
+.center{
+
+    text-align:center;
+
+}
+
+/* ==========================================================
+   INPUT FILE
+========================================================== */
+
+input[type=file]{
+
+    width:100%;
+
+    padding:12px;
+
+    border:2px dashed var(--color-primary);
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:#FAFBFC;
+
+    margin-bottom:15px;
+
+}
+
+/* ==========================================================
+   BOTONES
+========================================================== */
+
+button{
+
+    background:var(--color-primary);
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:14px 28px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    margin:8px;
+
+}
+
+button:hover{
+
+    background:var(--color-primary-dark);
+
+    transform:translateY(-2px);
+
+}
+
+button:disabled{
+
+    background:#B8C4D4;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+/* ==========================================================
+   BARRA DE PROGRESO
+========================================================== */
+
+.progress{
+
+    width:100%;
+
+    height:22px;
+
+    background:#DCE4EF;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    margin-bottom:12px;
+
+}
+
+.progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#2D6CDF,#5DA9FF);
+
+    transition:.4s;
+
+}
+
+/* ==========================================================
+   RESUMEN
+========================================================== */
+
+.summary{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:18px;
+
+}
+
+.summary-box{
+
+    background:#F9FAFB;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+.summary-box span{
+
+    display:block;
+
+    color:var(--color-text-light);
+
+    margin-bottom:8px;
+
+}
+
+.summary-box strong{
+
+    font-size:30px;
+
+    color:var(--color-primary-dark);
+
+}
+
+/* ==========================================================
+   TABLA
+========================================================== */
+
+#previewContainer{
+
+    overflow:auto;
+
+    max-height:450px;
+
+    border:1px solid var(--color-border);
+
+    border-radius:10px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    position:sticky;
+
+    top:0;
+
+    background:var(--color-primary-dark);
+
+    color:white;
+
+}
+
+th,td{
+
+    padding:12px;
+
+    border-bottom:1px solid var(--color-border);
+
+    text-align:left;
+
+}
+
+tbody tr:nth-child(even){
+
+    background:#FAFBFC;
+
+}
+
+tbody tr:hover{
+
+    background:#EDF4FF;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+
+.header{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    gap:20px;
+
+}
+
+.logo{
+
+    flex-direction:column;
+
+}
+
+.container{
+
+    padding:18px;
+
+}
+
+button{
+
+    width:100%;
+
+}
+
+}
