@@ -1,11 +1,9 @@
-## v1.1.0
+# DECISIÓN 001
 
-### Añadido
+La aplicación utilizará un sistema de diseño unificado basado en variables CSS.
 
-- Diseño completo de la interfaz.
-- Sistema de tarjetas.
-- Botones modernos.
-- Barra de progreso.
-- Vista previa tipo Excel.
-- Diseño responsive.
-- Base preparada para modo oscuro.
+Motivos:
+
+- Facilitar el mantenimiento.
+- Permitir el modo oscuro sin duplicar código.
+- Mantener una apariencia uniforme en todas las pantallas.
